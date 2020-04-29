@@ -12,12 +12,12 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-image: url("https://unsplash.com/photos/JKUTrJ4vK00");
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
-                margin: 0;
+                margin: 0;php
             }
 
             .full-height {
