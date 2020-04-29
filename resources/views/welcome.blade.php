@@ -66,8 +66,8 @@
                             <li class="has-children">
                                 <a href="#about-section" class="nav-link">About Us</a>
                                 <ul class="dropdown arrow-top">
-                                    <li><a href="#" target="_blank" class="nav-link"><span class="text-primary">More Free Templates</span></a></li>
-                                    <li><a href="#our-team-section" class="nav-link">Our Team</a></li>
+                                    <li><a href="#" target="_blank" class="nav-link"><span class="text-primary">Events</span></a></li>
+                                    <li><a href="#our-team-section" class="nav-link">Sermons</a></li>
                                     <li class="has-children">
                                         <a href="#">More Links</a>
                                         <ul class="dropdown">
@@ -104,8 +104,8 @@
 
                     <div class="row mb-4" data-aos="fade-up" data-aos-delay="200">
                         <div class="col-lg-6 mr-auto">
-                            <h1>Make Your Business More Profitable</h1>
-                            <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam assumenda ea quo cupiditate facere deleniti fuga officia.</p>
+                            <h1>Cornerstone SDA Church Kangemi</h1>
+                            <p class="mb-5">Tithe and Offering Record Management</p>
                             <div>
                                 <a href="#" class="btn btn-primary mr-2 mb-2">Get Started</a>
                             </div>
@@ -124,7 +124,7 @@
         <div class="container">
             <div class="row mb-5 justify-content-center text-center"  data-aos="fade-up">
                 <div class="col-7 text-center  mb-5">
-                    <h2 class="section-title">Imagine Features</h2>
+                    <h2 class="section-title">hFeatures</h2>
                     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quos quaerat sapiente nam, id vero.</p>
                 </div>
             </div>
