@@ -11,15 +11,21 @@
 
         <!-- Styles -->
         <style>
-            html, body {
-                background-image: url("https://unsplash.com/photos/JKUTrJ4vK00");
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;php
-            }
+            /*html, body {*/
 
+            /*    background-image:url(https://www.google.com/search?q=background+images&rlz=1C1CHBF_enKE885KE885&oq=background+images&aqs=chrome.0.69i59j0l7.6206j0j7&sourceid=chrome&ie=UTF-8);*/
+            /*    color: #636b6f;*/
+            /*    font-family: 'Nunito', sans-serif;*/
+            /*    font-weight: 200;*/
+            /*    height: 100vh;*/
+            /*    margin: 0;*/
+            /*}*/
+      body {
+
+      color: red;
+
+          background-image: url(public/edu.jpg);
+      }
             .full-height {
                 height: 100vh;
             }
