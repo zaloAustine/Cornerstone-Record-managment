@@ -24,6 +24,6 @@ Route::get('sermons','SermonController@allSermons');
 
 
 Route::post('postEvents','EventController@postEvents');
-Route::get('postSermons','SermonController@postSermons');
+Route::post('postSermons','SermonController@postSermons');
 
 

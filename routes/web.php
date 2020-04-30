@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('dashboard', function () {
-    return view('dashboard');
-});
+
+
+Route::get('dashboard','DashBoardController@index')->name('dashboard');
+Route::get('sermons','SermonController@index')->name('sermons');
+Route::get('events','EventController@index')->name('events');
+
+

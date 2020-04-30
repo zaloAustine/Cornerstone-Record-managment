@@ -53,22 +53,22 @@ Coded by www.creative-tim.com
         </div>
         <div class="sidebar-wrapper">
             <ul class="nav">
-                <li class="active ">
-                    <a href="./dashboard.html">
+                <li>
+                    <a href="{{route('dashboard')}}">
                         <i class="nc-icon nc-bank"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li>
-                    <a href="./icons.html">
+                    <a href="{{route('sermons')}}">
                         <i class="nc-icon nc-diamond"></i>
-                        <p>Icons</p>
+                        <p>Sermons</p>
                     </a>
                 </li>
                 <li>
-                    <a href="./map.html">
+                    <a href="{{route('events')}}">
                         <i class="nc-icon nc-pin-3"></i>
-                        <p>Maps</p>
+                        <p>Events</p>
                     </a>
                 </li>
                 <li>
@@ -83,7 +83,7 @@ Coded by www.creative-tim.com
                         <p>User Profile</p>
                     </a>
                 </li>
-                <li>
+                <li class="active ">
                     <a href="./tables.html">
                         <i class="nc-icon nc-tile-56"></i>
                         <p>Table List</p>
