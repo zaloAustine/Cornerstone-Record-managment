@@ -54,7 +54,7 @@ Coded by www.creative-tim.com
         <div class="sidebar-wrapper">
             <ul class="nav">
                 <li>
-                    <a href="{{route('dashboard')}}">
+                    <a href="{{route('home')}}">
                         <i class="nc-icon nc-bank"></i>
                         <p>Dashboard</p>
                     </a>
