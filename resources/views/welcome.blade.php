@@ -124,7 +124,7 @@
         <div class="container">
             <div class="row mb-5 justify-content-center text-center"  data-aos="fade-up">
                 <div class="col-7 text-center  mb-5">
-                    <h2 class="section-title">hFeatures</h2>
+                    <h2 class="section-title">Features</h2>
                     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quos quaerat sapiente nam, id vero.</p>
                 </div>
             </div>
