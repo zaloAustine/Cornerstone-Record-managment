@@ -21,7 +21,6 @@ Coded by www.creative-tim.com
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Paper Dashboard 2 by Creative Tim
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
@@ -44,8 +43,8 @@ Coded by www.creative-tim.com
                 </div>
                 <!-- <p>CT</p> -->
             </a>
-            <a href="https://www.creative-tim.com" class="simple-text logo-normal">
-                Creative Tim
+            <a href="" class="simple-text logo-normal">
+                Zalo@Coders
                 <!-- <div class="logo-image-big">
                   <img src="../assets/img/logo-big.png">
                 </div> -->
@@ -72,33 +71,10 @@ Coded by www.creative-tim.com
                     </a>
                 </li>
                 <li>
-                    <a href="./notifications.html">
-                        <i class="nc-icon nc-bell-55"></i>
-                        <p>Notifications</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="./user.html">
-                        <i class="nc-icon nc-single-02"></i>
-                        <p>User Profile</p>
-                    </a>
-                </li>
-                <li class="active ">
-                    <a href="./tables.html">
-                        <i class="nc-icon nc-tile-56"></i>
-                        <p>Table List</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="./typography.html">
-                        <i class="nc-icon nc-caps-small"></i>
-                        <p>Typography</p>
-                    </a>
-                </li>
-                <li class="active-pro">
-                    <a href="./upgrade.html">
-                        <i class="nc-icon nc-spaceship"></i>
-                        <p>Upgrade to PRO</p>
+
+                    <a href="{{route('records')}}">
+                        <i class="nc-icon nc-money-coins"></i>
+                        <p>Payment Records</p>
                     </a>
                 </li>
             </ul>
