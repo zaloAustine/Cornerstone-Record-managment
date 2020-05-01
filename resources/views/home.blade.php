@@ -82,8 +82,8 @@
                                     </div>
                                     <div class="col-7 col-md-8">
                                         <div class="numbers">
-                                            <p class="card-category">Current Amount</p>
-                                            <p class="card-title">$<p>
+                                            <p class="card-category">Total Amount Collected</p>
+                                            <p class="card-title">$ 10000000<p>
                                         </div>
                                     </div>
                                 </div>
@@ -98,33 +98,6 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="card card-stats">
-                            <div class="card-body ">
-                                <div class="row">
-                                    <div class="col-5 col-md-4">
-                                        <div class="icon-big text-center icon-warning">
-                                            <i class="nc-icon nc-vector text-danger"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-7 col-md-8">
-                                        <div class="numbers">
-                                            <p class="card-category">Total Amount</p>
-                                            <p class="card-title">$<p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer ">
-                                <hr>
-                                <div class="stats">
-                                    <i class="fa fa-clock-o"></i>
-                                   Update
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
 
@@ -132,7 +105,7 @@
             <html lang="en-US">
             <body>
 
-            <h1>Graphical representation of members giving</h1>
+            <h2 class="text-center">Graph Summary of members giving</h2>
 
             <div id="piechart"></div>
 
