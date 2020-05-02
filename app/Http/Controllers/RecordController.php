@@ -21,4 +21,9 @@ class RecordController extends Controller
         return DataTables::of(PaymentItem::query())->make(true);
     }
 
+    public function addRecord(){
+        return view('addRecord');
+
+    }
+
 }

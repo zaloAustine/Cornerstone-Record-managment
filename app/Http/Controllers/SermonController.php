@@ -32,4 +32,10 @@ class SermonController extends Controller
         $sermons = Sermon::all();
         return view('sermons', compact('sermons'));
     }
+
+
+    public function addSermon(){
+        return view('addsermons');
+
+    }
 }

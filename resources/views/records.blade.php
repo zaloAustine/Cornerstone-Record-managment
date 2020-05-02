@@ -1,17 +1,3 @@
-<!--
-=========================================================
-* Paper Dashboard 2 - v2.0.1
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-dashboard-2
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,6 +24,7 @@ Coded by www.creative-tim.com
     <link href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css" rel="stylesheet"/>
 
     <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet"/>
+
 
 
 
@@ -117,7 +104,7 @@ Coded by www.creative-tim.com
                 <div class="collapse navbar-collapse justify-content-end" id="navigation">
                     <ul class="navbar-nav">
                         <div>
-                            <a href="" class="btn btn-primary mr-2 mb-2">Add Record</a>
+                            <a href="{{route('addRecord')}}" class="btn btn-primary mr-2 mb-2">Add Record</a>
                         </div>
                     </ul>
                 </div>

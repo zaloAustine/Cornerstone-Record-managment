@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Event;
 use App\Sermon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class EventController extends Controller
 {
@@ -39,5 +40,44 @@ class EventController extends Controller
             return response()->json(["Response"=>'Succsess']);
 
         }
+
+    public function addEvent(){
+        return view('addevents');
+
+    }
+
+
+
+
+    public function UploadImage(Request $request)
+    {
+
+        $this->validate(request(), [
+            'description' => 'required',
+            'file' => 'required|image|mimes:jpg,jpeg,png,gif|max:5000'
+        ]);
+
+        $fileName = null;
+        if (request()->hasFile('file')) {
+            $file = request()->file('file');
+            $fileName = md5($file->getClientOriginalName() . time()) . "." . $file->getClientOriginalExtension();
+            $request->file->move(public_path('images'), $fileName);
+
+
+            $event = new Event();
+            $event->description = $request->input('description');
+            $event->imageUrls = $fileName;
+
+            if($event->save()){
+
+                $events = Event::all();
+                return view('events', compact('events'));
+
+                 }
+            }
+
+
+
+    }
 
 }

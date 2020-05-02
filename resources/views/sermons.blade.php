@@ -102,7 +102,7 @@ Coded by www.creative-tim.com
                 <div class="collapse navbar-collapse justify-content-end" id="navigation">
                     <ul class="navbar-nav">
                         <div>
-                            <a href="" class="btn btn-primary mr-2 mb-2">Add Sermon</a>
+                            <a href="{{route('addSermon')}}" class="btn btn-primary mr-2 mb-2">Add Sermon</a>
                         </div>
                     </ul>
                 </div>

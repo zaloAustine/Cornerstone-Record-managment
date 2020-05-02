@@ -2,6 +2,7 @@
 
 use App\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
@@ -13,7 +14,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-      //   $this->call(User::class);
+       // $this->call(User::class);
+        factory(User::class)->create([
+            'name' => 'User1',
+            'email' => 'austinezaloa@email.com',
+            'password' => bcrypt('123456789'),
+        ]);
 
 
 

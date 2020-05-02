@@ -15,6 +15,12 @@ Route::get('events','EventController@index')->name('events');
 Route::get('records','RecordController@index')->name('records');
 Route::get('getrecords','RecordController@getRecords')->name('getrecords');
 
+    Route::get('addSermon','SermonController@addSermon')->name('addSermon');
+    Route::get('addEvent','EventController@addEvent')->name('addEvent');
+    Route::get('addRecord','RecordController@addRecord')->name('addRecord');
+
+    Route::post('UploadImage','EventController@UploadImage')->name('UploadImage');
+
 
 });
 
