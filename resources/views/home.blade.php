@@ -120,11 +120,22 @@
                 function drawChart() {
                     var data = google.visualization.arrayToDataTable([
                         ['Giving', 'Amount'],
-                        ['Tithe', 200],
-                        ['Offering', 800],
-                        ['Camp meeting Offering', 600],
-                        ['Development', 2500],
-                        ['Benevolent Kitty', 850]
+                        ['Gods Tithe', 200],
+                        ['Combine Offering', 800],
+                        ['Development', 600],
+                        ['Mission', 2500],
+                        ['Youth Kitty', 850],
+                        ['Building Development', 700],
+                        ['Combine Offering', 300],
+                        ['Evangelism Local Church', 650],
+                        ['Evangelism Conference', 920],
+                        ['Recurrent Expenditure', 85],
+                        ['Station Dvelopment', 890],
+                        ['Camp meeting Expenses', 250],
+                        ['Camp meeting Offering', 860],
+                        ['Benevolence', 670],
+                        ['Children Kitty', 2600],
+
                     ]);
 
                     // Optional; add a title and set the width and height of the chart
@@ -134,10 +145,12 @@
                     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
                     chart.draw(data, options);
                 }
+
             </script>
 
             </body>
             </html>
+
 
 
 
@@ -158,7 +171,7 @@
               <span class="copyright">
                 © <script>
                   document.write(new Date().getFullYear())
-                </script>, made with <i class="fa fa-heart heart"></i> by Creative Tim
+                </script>, EasyTech<i class="fa fa-heart heart"></i> Developers
               </span>
                         </div>
                     </div>
