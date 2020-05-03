@@ -71,7 +71,7 @@
 
             <div class="content">
                 <div class="row">
-                    <div class="">
+                    <div class="col-5 col-md-4">
                         <div class="card card-stats">
                             <div class="card-body ">
                                 <div class="row">
@@ -98,12 +98,68 @@
                         </div>
                     </div>
 
+                    <div class="col-5 col-md-4">
+                        <div class="card card-stats">
+                            <div class="card-body ">
+                                <div class="row">
+                                    <div class="col-5 col-md-4">
+                                        <div class="icon-big text-center icon-warning">
+                                            <i class="nc-icon nc-globe text-warning"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-7 col-md-8">
+                                        <div class="numbers">
+                                            <p class="card-category">Total Amount Collected</p>
+                                            <p class="card-title">$ 10000000<p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer ">
+                                <hr>
+                                <div class="stats">
+                                    <i class="fa fa-refresh"></i>
+                                    Update
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-5 col-md-4">
+                        <div class="card card-stats">
+                            <div class="card-body ">
+                                <div class="row">
+                                    <div class="col-5 col-md-4">
+                                        <div class="icon-big text-center icon-warning">
+                                            <i class="nc-icon nc-globe text-warning"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-7 col-md-8">
+                                        <div class="numbers">
+                                            <p class="card-category">Total Amount Collected</p>
+                                            <p class="card-title">$ 10000000<p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer ">
+                                <hr>
+                                <div class="stats">
+                                    <i class="fa fa-refresh"></i>
+                                    Update
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
 
             <!DOCTYPE html>
             <html lang="en-US">
             <body>
+
 
             <h2 class="text-center">Graph Summary of members giving</h2>
 
@@ -139,14 +195,18 @@
                     ]);
 
                     // Optional; add a title and set the width and height of the chart
-                    var options = {'title':'Memebers Giving ', 'width':550, 'height':400};
+                    var options = {'title':'Memebers Giving ', 'width':1000, 'height':500,is3D:true};
 
                     // Display the chart inside the <div> element with id="piechart"
-                    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                    var chart = new google.visualization.ColumnChart(document.getElementById('piechart'));
                     chart.draw(data, options);
                 }
 
             </script>
+
+
+            <div id="piechart" style="width: 900px; height: 500px;"></div>
+
 
             </body>
             </html>
