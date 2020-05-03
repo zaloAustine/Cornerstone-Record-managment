@@ -191,8 +191,8 @@
                         ['Camp meeting Offering', 860],
                         ['Benevolence', 670],
                         ['Children Kitty', 2600],
-
                     ]);
+
 
                     // Optional; add a title and set the width and height of the chart
                     var options = {'title':'Memebers Giving ', 'width':1000, 'height':500,is3D:true};
