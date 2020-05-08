@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Event;
 use App\Sermon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 
 class EventController extends Controller
@@ -59,14 +60,16 @@ class EventController extends Controller
 
         $fileName = null;
         if (request()->hasFile('file')) {
-            $file = request()->file('file');
-            $fileName = md5($file->getClientOriginalName() . time()) . "." . $file->getClientOriginalExtension();
-            $request->file->move(public_path('images'), $fileName);
+
+            $cover = $request->file('file');
+            $extension = $cover->getClientOriginalExtension();
+            Storage::disk('public')->put($cover->getFilename().'.'.$extension,File::get($cover));
+
 
 
             $event = new Event();
             $event->description = $request->input('description');
-            $event->imageUrls = $fileName;
+            $event->imageUrls = $cover->getFilename().'.'.$extension;
 
             if($event->save()){
 
@@ -75,8 +78,6 @@ class EventController extends Controller
 
                  }
             }
-
-
 
     }
 

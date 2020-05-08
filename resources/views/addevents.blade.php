@@ -42,18 +42,19 @@
                     <div class="uk-form-controls">
                         <div class="form-group">
                             {{Form::label('descriptionLabel', 'Description')}}
-                            {{Form::text('description', '',array('class' => 'uk-input uk-form-large uk-border-rounded', 'style'=>' resize:vertical; ', 'id' => 'id'))}}
+                            {{Form::text('description', '',array('class' => 'form-control rounded-0 uk-input uk-form-large uk-border-rounded', 'style'=>' resize:vertical; ', 'id' => 'id'))}}
                         </div>
                     </div>
                 </div>
 
 
-                <input type="file" name="file" id="file">
+
+                <input type="file" name="file" id="file" class="btn btn-primary mr-2 mb-2">
 
                 <div>
                     <input type="hidden" name="_next" value="https://docs.jekyll.plus/thanks/">
                     <input type="text" name="_gotcha" style="display:none">
-                    <input class="uk-button uk-button-primary uk-button-large uk-width-1-1" type="submit" value="Post">
+                    <input class="uk-button uk-button-primary uk-button-large uk-width-1-1v btn btn-primary mr-2 mb-2" type="submit" value="Post">
                 </div>
 
 
