@@ -21,15 +21,64 @@
 </head>
 
 <body class="">
-
-{{ Form::open(array('url' => 'foo/bar')) }}
-
-{{ Form::close() }}
+<div class="col-md-6 mb-3 mb-md-0">
 
 
+<form class="uk-form-stacked uk-margin-medium-top" method = 'POST' id="platform" action='{!!route("UploadSermon")!!}' accept-charset="UTF-8" enctype="multipart/form-data">
 
 
-<!--   Core JS Files   -->
+    {{ Form::open(['action' => 'SermonController@UploadSermon']) }}
+
+    <div class="row">
+        <h2 class="text-center">Add an Sermon</h2>
+
+    </div>
+
+
+    <div class="uk-margin-medium-bottom">
+        <div class="uk-form-controls">
+            <div class="form-group">
+                {{Form::label('description', 'description')}}
+                {{Form::text('description', '',array('class' => 'form-control rounded-0 uk-input uk-form-large uk-border-rounded', 'style'=>' resize:vertical; ', 'id' => 'id'))}}
+            </div>
+        </div>
+    </div>
+
+
+    <div class="uk-margin-medium-bottom">
+        <div class="uk-form-controls">
+            <div class="form-group">
+                {{Form::label('Topic', 'Topic')}}
+                {{Form::text('Topic', '',array('class' => 'form-control rounded-0 uk-input uk-form-large uk-border-rounded', 'style'=>' resize:vertical; ', 'id' => 'id'))}}
+            </div>
+        </div>
+    </div>
+
+
+    <div class="uk-margin-medium-bottom">
+        <div class="uk-form-controls">
+            <div class="form-group">
+                {{Form::label('Pastor', 'Pastor')}}
+                {{Form::text('Pastor', '',array('class' => 'form-control rounded-0 uk-input uk-form-large uk-border-rounded', 'style'=>' resize:vertical; ', 'id' => 'id'))}}
+            </div>
+        </div>
+    </div>
+
+    {{Form::label('Audio', 'Audio')}}
+    <input type="file" name="file" id="file" class="btn btn-primary mr-2 mb-2">
+
+    <div>
+        <input type="hidden" name="_next" value="https://docs.jekyll.plus/thanks/">
+        <input type="text" name="_gotcha" style="display:none">
+        <input class="uk-button uk-button-primary uk-button-large uk-width-1-1v btn btn-primary mr-2 mb-2" type="submit" value="Post">
+    </div>
+
+
+
+
+
+
+    <!--   Core JS Files   -->
 <script src="../assets/js/core/jquery.min.js"></script>
 <script src="../assets/js/core/popper.min.js"></script>
 <script src="../assets/js/core/bootstrap.min.js"></script>
@@ -43,6 +92,8 @@
 <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="../assets/js/paper-dashboard.min.js?v=2.0.1" type="text/javascript"></script><!-- Paper Dashboard DEMO methods, don't include it in your project! -->
 <script src="../assets/demo/demo.js"></script>
+</form>
+</div>
 </body>
 
 </html>

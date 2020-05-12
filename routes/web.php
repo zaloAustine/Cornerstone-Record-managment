@@ -10,8 +10,13 @@ Route::get('/', function () {
 Route::group(['middleware' => ['auth']], function () {
 
 Route::get('dashboard','DashBoardController@index')->name('dashboard');
-Route::get('sermons','SermonController@index')->name('sermons');
-Route::get('events','EventController@index')->name('events');
+
+Route::post('UploadSermon','SermonController@UploadSermon')->name('UploadSermon');
+
+Route::post('postBulletin','discoverController@PostBulletin')->name('postBulletin');
+Route::post('Postzoom','discoverController@Postzoom')->name('Postzoom');
+
+
 Route::get('records','RecordController@index')->name('records');
 Route::get('getrecords','RecordController@getRecords')->name('getrecords');
 
@@ -26,12 +31,28 @@ Route::get('getrecords','RecordController@getRecords')->name('getrecords');
 
 
 
+    Route::post('AddPaymentRecord','RecordController@AddPaymentRecord')->name('AddPaymentRecord');
+    Route::get('events','EventController@index')->name('events');
+    Route::get('sermons','SermonController@index')->name('sermons');
+
+
+
 
 
 
 Route::get('login', function () {
     return view('login');
 });
+
+Route::get('zoom', function () {
+    return view('addZoom');
+});
+
+Route::get('bulletin', function () {
+    return view('addBulletin');
+});
+
+
 
 Auth::routes();
 

@@ -20,56 +20,57 @@
     <link href="../assets/demo/demo.css" rel="stylesheet" />
 </head>
 
-<body class="">
+<body >
 
-<div class="col-md-6 mb-3 mb-md-0">
 
-<form class="uk-form-stacked uk-margin-medium-top" method = 'POST' id="platform" action='{!!route("AddPaymentRecord")!!}' accept-charset="UTF-8" enctype="multipart/form-data">
-    @csrf
+        <div class="card align-content-center col-md-12">
 
-    <h2 class="h4 text-black mb-5">Contact Form</h2>
+            <div class="col-md-4">
 
-    <div class="row form-group">
-        <div class="col-md-6 mb-3 mb-md-0">
-            <label class="text-black" for="name">Full Name</label>
-            <input type="text" id="name" name="name" class="form-control rounded-0">
-        </div>
-    </div>
+                <form class="uk-form-stacked uk-margin-medium-top" method = 'POST' id="platform" action='{!!route("postBulletin")!!}' accept-charset="UTF-8" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                {{ Form::open(['action' => 'discoverController@PostBulletin']) }}
 
-    <div class="row form-group">
-        <div class="col-md-6">
-            <label class="text-black" for="email">Email</label>
-            <input type="email" id="email" name="email" class="form-control rounded-0">
-        </div>
-    </div>
+            <div class="row">
+                <h2 class="text-center">Add Bulletin</h2>
 
-    <div class="row form-group">
-        <div class="uk-margin-medium-bottom">
-            <div class="uk-form-controls">
-                <div class="form-group">
-                    {!! Form::Label('item', 'Item:') !!}
-                    {!! Form::select('item', $item, ['name','id'], array('class' => 'uk-input uk-form-large uk-border-rounded', 'style'=>' resize:vertical; ', 'id' => 'id')),null !!}
-                </div>
             </div>
+
+
+                <div class="uk-margin-medium-bottom">
+                    <div class="uk-form-controls">
+                        <div class="form-group">
+                            {{Form::label('descriptionLabel', 'Description')}}
+                            {{Form::text('description', '',array('class' => 'form-control rounded-0 uk-input uk-form-large uk-border-rounded', 'style'=>' resize:vertical; ', 'id' => 'id'))}}
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <input type="file" name="file" id="file" class="btn btn-primary mr-2 mb-2">
+
+                <div>
+                    <input type="hidden" name="_next" value="https://docs.jekyll.plus/thanks/">
+                    <input type="text" name="_gotcha" style="display:none">
+                    <input class="uk-button uk-button-primary uk-button-large uk-width-1-1v btn btn-primary mr-2 mb-2" type="submit" value="Post">
+                </div>
+
+
+
+                {{ Form::close() }}
+
+
+            </div>
+
+
         </div>
-    </div>
-
-<div class="row form-group">
-    <div class="col-md-6">
-        <label class="text-black" for="email">Amount</label>
-        <input type="number" id="amount" name="amount" class="form-control rounded-0">
-    </div>
-</div>
-    <div class="row form-group">
-        <div class="col-md-12">
-            <input type="submit"  value="Add Record" class="btn btn-primary mr-2 mb-2">
-        </div>
-    </div>
 
 
-</form>
 
-</div>
+
+
+
 
 
 <!--   Core JS Files   -->

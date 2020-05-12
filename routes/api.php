@@ -21,7 +21,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('events','EventController@allEvents');
 Route::get('sermons','SermonController@allSermons');
+Route::get('items','SermonController@allItems');
+Route::get('Viewzoom','discoverController@Viewzoom');
+Route::get('ViewBulletin','discoverController@ViewBulletin');
 
+
+Route::post('postRecord2','RecordController@AddPaymentRecord2');
 
 Route::post('postEvents','EventController@postEvents');
 Route::post('postSermons','SermonController@postSermons');
