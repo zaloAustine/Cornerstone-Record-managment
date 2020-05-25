@@ -83,7 +83,7 @@
                                     <div class="col-7 col-md-8">
                                         <div class="numbers">
                                             <p class="card-category">Total Amount Collected</p>
-                                            <p class="card-title">$ 10000000<p>
+                                            <p class="card-title">{{$sum}}<p>
                                         </div>
                                     </div>
                                 </div>
@@ -109,8 +109,8 @@
                                     </div>
                                     <div class="col-7 col-md-8">
                                         <div class="numbers">
-                                            <p class="card-category">Total Amount Collected</p>
-                                            <p class="card-title">$ 10000000<p>
+                                            <p class="card-category">Total Tithe Collected</p>
+                                            <p class="card-title">{{$tithe}}<p>
                                         </div>
                                     </div>
                                 </div>
@@ -136,8 +136,8 @@
                                     </div>
                                     <div class="col-7 col-md-8">
                                         <div class="numbers">
-                                            <p class="card-category">Total Amount Collected</p>
-                                            <p class="card-title">$ 10000000<p>
+                                            <p class="card-category">Total Combined Offering Collected</p>
+                                            <p class="card-title">{{$offeringCombined}}<p>
                                         </div>
                                     </div>
                                 </div>
