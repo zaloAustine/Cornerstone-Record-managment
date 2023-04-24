@@ -11,7 +11,7 @@
                     <!-- <p>CT</p> -->
                 </a>
                 <a href="" class="simple-text logo-normal">
-                    Zalo@Coders
+                    COSDAC
                     <!-- <div class="logo-image-big">
                       <img src="../assets/img/logo-big.png">
                     </div> -->
@@ -83,7 +83,7 @@
                                     <div class="col-7 col-md-8">
                                         <div class="numbers">
                                             <p class="card-category">Total Amount Collected</p>
-                                            <p class="card-title">{{$sum}}<p>
+                                            <p class="card-title">{{$sum ?? ''}}<p>
                                         </div>
                                     </div>
                                 </div>
@@ -110,7 +110,7 @@
                                     <div class="col-7 col-md-8">
                                         <div class="numbers">
                                             <p class="card-category">Total Tithe Collected</p>
-                                            <p class="card-title">{{$tithe}}<p>
+                                            <p class="card-title">{{$tithe ?? ''}}<p>
                                         </div>
                                     </div>
                                 </div>
@@ -137,7 +137,7 @@
                                     <div class="col-7 col-md-8">
                                         <div class="numbers">
                                             <p class="card-category">Total Combined Offering Collected</p>
-                                            <p class="card-title">{{$offeringCombined}}<p>
+                                            <p class="card-title">{{$offeringCombined ?? ''}}<p>
                                         </div>
                                     </div>
                                 </div>
@@ -161,9 +161,9 @@
             <body>
 
 
-            <h2 class="text-center">Graph Summary of members giving</h2>
+            <!-- <h2 class="text-center">Graph Summary of members giving</h2> -->
 
-            <div id="piechart"></div>
+            <!-- <div id="piechart"></div>
 
             <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
@@ -205,26 +205,61 @@
             </script>
 
 
-            <div id="piechart" style="width: 900px; height: 500px;"></div>
+            <div id="piechart" style="width: 900px; height: 500px;"></div> -->
+            <section class="content" style="margin-left:20px;margin-right:20px;margin-top:50px;">
 
+<label for="charts">Select Chart Style</label>
+<select name="chart" onchange="myFunction()" class="form-control" id="chart" style="width:120px;">
+    <option value="pie">Pie</option>
+    <option value="column">Column</option>
+    <option value="pyramid">Pyramid</option>
+    <option value="bar">Bar</option>
+</select>
+
+<!-- Chart Out Put is printinh here   -->
+<script>
+function myFunction() 
+{
+  var chartType = document.getElementById("chart").value;
+  var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title: {
+		text: "Graph Summary of members giving"
+	},
+	subtitles: [{
+		text: "APril 2023"
+	}],
+	data: [{
+	    type:chartType, //"column",  type: "pie",
+		yValueFormatString: "#,##0.\"\"",
+		indexLabel: "{label} ({y})",
+		dataPoints: <?php echo json_encode($data ?? '', JSON_NUMERIC_CHECK); ?>
+	}]
+});
+chart.render();
+}
+
+myFunction();
+
+</script>
+
+
+<div class="product-index" align="right" style="margin-top:40px;">
+    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+</div>
+
+
+</section>
 
             </body>
             </html>
-
-
-
-
-
-
-
             <footer class="footer footer-black  footer-white ">
                 <div class="container-fluid">
                     <div class="row">
                         <nav class="footer-nav">
                             <ul>
-                                <li><a href="https://www.creative-tim.com" target="_blank">Creative Tim</a></li>
-                                <li><a href="https://www.creative-tim.com/blog" target="_blank">Blog</a></li>
-                                <li><a href="https://www.creative-tim.com/license" target="_blank">Licenses</a></li>
+                                <li><a  target="_blank">EasyTech Developers</a></li>
+                                <li><a  target="_blank">Licenses</a></li>
                             </ul>
                         </nav>
                         <div class="credits ml-auto">
@@ -241,3 +276,4 @@
     </div>
 
 @endsection
+     

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\PaymentItem;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class HomeController extends Controller
 {
@@ -45,6 +47,20 @@ class HomeController extends Controller
         $LocalChurchBudget = PaymentItem::where("paymentType","Local Church Budget")->sum('amount');
         $Others = PaymentItem::where("paymentType","Others")->sum('amount');
 
-        return view('home', compact('sum','tithe','offeringCombined'));
+
+        // $post = DB::table('payment_items')->get('*')->toArray();
+          $post = PaymentItem::all();
+    
+           foreach($post as $row)
+            {
+               $data[] = array
+                (
+                 "label"=>$row->paymentType,
+                 "y"=>$row->amount
+                ); 
+            }
+
+        
+        return view('home', compact('sum','tithe','offeringCombined','data'));
     }
 }

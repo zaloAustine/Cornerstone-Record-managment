@@ -34,6 +34,7 @@ Route::get('getrecords','RecordController@getRecords')->name('getrecords');
     Route::post('AddPaymentRecord','RecordController@AddPaymentRecord')->name('AddPaymentRecord');
     Route::get('events','EventController@index')->name('events');
     Route::get('sermons','SermonController@index')->name('sermons');
+    Route::get('/statics','RecordController@showStatics');
 
 
 
